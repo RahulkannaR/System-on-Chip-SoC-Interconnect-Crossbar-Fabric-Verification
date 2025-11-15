@@ -1,0 +1,162 @@
+QuestaSim-64 qrun 2024.3_1 Utility 2024.10 Oct 17 2024
+Start time: 08:25:19 on Nov 12,2025
+qrun -batch -access=rw+/. -uvmhome uvm-1.2 -timescale 1ns/1ns -mfcu design.sv testbench.sv "+UVM_TESTNAME=simple_test" "+UVM_VERBOSITY=UVM_MEDIUM" -do " run -all; exit" 
+Creating library 'qrun.out/work'.
+Mapping library 'mtiUvm' to 'qrun.out/work'.
+QuestaSim-64 vlog 2024.3_1 Compiler 2024.10 Oct 17 2024
+Start time: 08:25:19 on Nov 12,2025
+vlog -timescale 1ns/1ns -mfcu -ccflags "-Wno-missing-declarations" -ccflags "-Wno-maybe-uninitialized" -ccflags "-Wno-return-type" -ccflags "-DQUESTA" /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc /usr/share/questa/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv design.sv testbench.sv -work qrun.out/work "+incdir+/usr/share/questa/questasim/verilog_src/uvm-1.2/src" -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+-- Compiling package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling package questa_uvm_pkg
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling package uvm_pkg_sv_unit
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling interface bus_vif
+-- Compiling module cross_bar_tb
+
+Top level modules:
+	cross_bar_tb
+-- Compiling DPI/PLI C++ file /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc
+
+In file included from /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl.c:27,
+                 from /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc:37:
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c: In function 'int uvm_is_vhdl_path(char*)':
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c:90:12: warning: 'char* strncpy(char*, const char*, size_t)' specified bound depends on the length of the source argument [-Wstringop-overflow=]
+   90 |     strncpy(path_copy, path, path_len);
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c:72:20: note: length computed here
+   72 |   path_len = strlen(path);
+      |              ~~~~~~^~~~~~
+
+End time: 08:25:21 on Nov 12,2025, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2024.3_1 Compiler 2024.10 Oct 17 2024
+Start time: 08:25:21 on Nov 12,2025
+vopt -access=rw+/. -timescale 1ns/1ns -mfcu -findtoplevels qrun.out/work+1+ -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+
+Top level modules:
+	cross_bar_tb
+
+Analyzing design...
+-- Loading module cross_bar_tb
+-- Loading package questa_uvm_pkg
+-- Loading interface bus_vif
+Optimizing 6 design-units (inlining 4/5 module instances):
+-- Optimizing package uvm_pkg (uvm-1.2 Built-in)(fast)
+-- Optimizing package questa_uvm_pkg(fast)
+-- Optimizing package uvm_pkg_sv_unit(fast)
+-- Inlining interface bus_vif(fast__1)
+-- Optimizing module cross_bar_tb(fast)
+-- Optimizing interface bus_vif(fast)
+Optimized design name is qrun_opt
+End time: 08:25:28 on Nov 12,2025, Elapsed time: 0:00:07
+Errors: 0, Warnings: 0
+# vsim -batch "+UVM_TESTNAME=simple_test" "+UVM_VERBOSITY=UVM_MEDIUM" -lib qrun.out/work -do " run -all; exit" -statslog qrun.out/stats_log qrun_opt -appendlog -l qrun.log 
+# Start time: 08:25:28 on Nov 12,2025
+# Loading /tmp/unknown@b9a4b58ae1cd_dpi_52/linux_x86_64_gcc-10.3.0/export_tramp.so
+# //  Questa Sim-64
+# //  Version 2024.3_1 linux_x86_64 Oct 17 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.uvm_pkg(fast)
+# Loading work.uvm_pkg_sv_unit(fast)
+# Loading work.questa_uvm_pkg(fast)
+# Loading work.cross_bar_tb(fast)
+# Compiling /tmp/unknown@b9a4b58ae1cd_dpi_52/linux_x86_64_gcc-10.3.0/exportwrapper.c
+# Loading /tmp/unknown@b9a4b58ae1cd_dpi_52/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# 
+# run -all
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ===============================================
+# 🧠 AXI CROSSBAR UVM TESTBENCH INITIALIZATION 🧠
+# Clock Period: 8ns
+# Reset asserted for 20ns
+# ===============================================
+# UVM_INFO @ 0: reporter [RNTST] Running test simple_test...
+# ** Error: (vsim-7) Failed to open VCD file "sim/waves.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)    : testbench.sv(86)
+#    Time: 0 ps  Iteration: 0  Instance: /cross_bar_tb
+# ==== VCD DUMP ENABLED ====
+# ===============================================
+# 🚀 CROSSBAR VERIFICATION TEST STARTED 🚀
+# ===============================================
+# UVM_INFO testbench.sv(26) @ 0: uvm_test_top [TEST] Simple test started - Crossbar Verification
+# UVM_INFO testbench.sv(27) @ 0: uvm_test_top [TEST] Master→Slave mapping: Master[0] -> Slave[1]
+# UVM_INFO testbench.sv(28) @ 0: uvm_test_top [TEST] Arbitration: Round Robin
+# UVM_INFO testbench.sv(39) @ 20000: uvm_test_top [PROGRESS] Progress: 20% complete
+# UVM_INFO testbench.sv(39) @ 60000: uvm_test_top [PROGRESS] Progress: 40% complete
+# UVM_INFO testbench.sv(39) @ 100000: uvm_test_top [PROGRESS] Progress: 60% complete
+# UVM_INFO testbench.sv(39) @ 140000: uvm_test_top [PROGRESS] Progress: 80% complete
+# UVM_INFO testbench.sv(39) @ 180000: uvm_test_top [PROGRESS] Progress: 100% complete
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "sim/results_summary.txt" for writing.
+# No such file or directory. (errno = ENOENT)    : testbench.sv(93)
+#    Time: 200 ns  Iteration: 0  Instance: /cross_bar_tb
+# -----------------------------------------------
+# ✅ All Transactions Completed at 200000 ns!
+# Total Transactions : 10
+# Passed Transactions: 9
+# Failed Transactions: 1
+# Overall Pass Percentage: 90.00 %
+# -----------------------------------------------
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1270) @ 200000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 200000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   13
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [PROGRESS]     5
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST]     3
+# [TEST_DONE]     1
+# [UVM/RELNOTES]     1
+# 
+# ** Note: $finish    : /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 200 ns  Iteration: 68  Instance: /cross_bar_tb
+# End time: 08:25:31 on Nov 12,2025, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 1
+End time: 08:25:31 on Nov 12,2025, Elapsed time: 0:00:12
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings:   0
+    vopt: Errors:   0, Warnings:   0
+    vsim: Errors:   1, Warnings:   1
+  Totals: Errors:   1, Warnings:   1

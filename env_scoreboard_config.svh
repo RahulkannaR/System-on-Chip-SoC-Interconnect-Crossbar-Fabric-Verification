@@ -1,0 +1,13 @@
+class env_scoreboard_config extends uvm_object;
+  `uvm_object_utils(env_scoreboard_config)
+
+  test_name_e test_name = UNDEFINED;
+
+  extern function new(string name = "");
+
+endclass : env_scoreboard_config
+
+
+function env_scoreboard_config::new(string name = "");
+  super.new(name);
+endfunction : new

@@ -1,0 +1,230 @@
+$date
+	Wed Nov 12 08:25:31 2025
+$end
+$version
+	QuestaSim Version 2024.3_1
+$end
+$timescale
+	1ps
+$end
+
+$scope module cross_bar_tb $end
+$var integer 32 ! fd $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+
+$scope begin mbus $end
+$upscope $end
+
+$scope begin sbus $end
+$upscope $end
+
+$scope module mbus[0] $end
+$var reg 32 $ awaddr [31:0] $end
+$var reg 1 % awready $end
+$var reg 1 & awvalid $end
+$var reg 1 ' bready $end
+$var reg 2 ( bresp [1:0] $end
+$var reg 1 ) bvalid $end
+$var reg 1 * clk $end
+$var reg 1 + reset $end
+$var reg 32 , wdata [31:0] $end
+$var reg 1 - wready $end
+$var reg 1 . wvalid $end
+$upscope $end
+
+$scope module mbus[1] $end
+$var reg 32 / awaddr [31:0] $end
+$var reg 1 0 awready $end
+$var reg 1 1 awvalid $end
+$var reg 1 2 bready $end
+$var reg 2 3 bresp [1:0] $end
+$var reg 1 4 bvalid $end
+$var reg 1 5 clk $end
+$var reg 1 6 reset $end
+$var reg 32 7 wdata [31:0] $end
+$var reg 1 8 wready $end
+$var reg 1 9 wvalid $end
+$upscope $end
+
+$scope module sbus[0] $end
+$var reg 32 : awaddr [31:0] $end
+$var reg 1 ; awready $end
+$var reg 1 < awvalid $end
+$var reg 1 = bready $end
+$var reg 2 > bresp [1:0] $end
+$var reg 1 ? bvalid $end
+$var reg 1 @ clk $end
+$var reg 1 A reset $end
+$var reg 32 B wdata [31:0] $end
+$var reg 1 C wready $end
+$var reg 1 D wvalid $end
+$upscope $end
+
+$scope module sbus[1] $end
+$var reg 32 E awaddr [31:0] $end
+$var reg 1 F awready $end
+$var reg 1 G awvalid $end
+$var reg 1 H bready $end
+$var reg 2 I bresp [1:0] $end
+$var reg 1 J bvalid $end
+$var reg 1 K clk $end
+$var reg 1 L reset $end
+$var reg 32 M wdata [31:0] $end
+$var reg 1 N wready $end
+$var reg 1 O wvalid $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+0"
+1#
+bx $
+x%
+x&
+x'
+bx (
+x)
+x*
+x+
+bx ,
+x-
+x.
+bx /
+x0
+x1
+x2
+bx 3
+x4
+x5
+x6
+bx 7
+x8
+x9
+bx :
+x;
+x<
+x=
+bx >
+x?
+x@
+xA
+bx B
+xC
+xD
+bx E
+xF
+xG
+xH
+bx I
+xJ
+xK
+xL
+bx M
+xN
+xO
+$end
+#4000
+1"
+#8000
+0"
+#12000
+1"
+#16000
+0"
+#20000
+0#
+1"
+#24000
+0"
+#28000
+1"
+#32000
+0"
+#36000
+1"
+#40000
+0"
+#44000
+1"
+#48000
+0"
+#52000
+1"
+#56000
+0"
+#60000
+1"
+#64000
+0"
+#68000
+1"
+#72000
+0"
+#76000
+1"
+#80000
+0"
+#84000
+1"
+#88000
+0"
+#92000
+1"
+#96000
+0"
+#100000
+1"
+#104000
+0"
+#108000
+1"
+#112000
+0"
+#116000
+1"
+#120000
+0"
+#124000
+1"
+#128000
+0"
+#132000
+1"
+#136000
+0"
+#140000
+1"
+#144000
+0"
+#148000
+1"
+#152000
+0"
+#156000
+1"
+#160000
+0"
+#164000
+1"
+#168000
+0"
+#172000
+1"
+#176000
+0"
+#180000
+1"
+#184000
+0"
+#188000
+1"
+#192000
+0"
+#196000
+1"
+#200000
+b0 !
+0"
