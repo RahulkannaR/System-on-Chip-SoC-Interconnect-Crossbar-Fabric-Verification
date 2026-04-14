@@ -1,13 +1,3 @@
-
-
-
-
-//-----------------------------------------------------------------------------
-// Author  : Yuriy Gritsenko
-// URL     : https://github.com/yuravg/uvm_tb_cross_bar
-// License : MIT License
-//-----------------------------------------------------------------------------
-
 `ifndef _BUS_IF_PKG
 	`define _BUS_IF_PKG
 
