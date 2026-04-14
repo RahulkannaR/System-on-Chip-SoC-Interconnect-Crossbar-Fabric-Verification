@@ -1,9 +1,3 @@
-//-----------------------------------------------------------------------------
-// Author  : Yuriy Gritsenko
-// URL     : https://github.com/yuravg/uvm_tb_cross_bar
-// License : MIT License
-//-----------------------------------------------------------------------------
-
 module bus2bus_mux(
 	input       sel_in,
 	input       sel_out,
