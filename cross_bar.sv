@@ -1,9 +1,3 @@
-//-----------------------------------------------------------------------------
-// Author  : Yuriy Gritsenko
-// URL     : https://github.com/yuravg/uvm_tb_cross_bar
-// License : MIT License
-//-----------------------------------------------------------------------------
-
 import bus_if_pkg::*;
 
 module cross_bar(
